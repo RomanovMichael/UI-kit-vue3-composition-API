@@ -1,5 +1,9 @@
 <script setup>
 import Button from "@/components/Button.vue";
+
+const eventForButton = () => {
+  alert("You clicked danger button");
+};
 </script>
 
 <template>
@@ -35,6 +39,15 @@ import Button from "@/components/Button.vue";
     <Button label="Info" color="info" :outlined="true" />
     <Button label="Warning" color="warning" :outlined="true" />
     <Button label="Danger" color="danger" :outlined="true" />
+  </div>
+  <h2 class="heading-2">Size</h2>
+  <div class="line">
+    <Button label="Normal" color="primary" />
+    <Button label="Large" color="primary" size="large" />
+  </div>
+  <h2 class="heading-2">Event</h2>
+  <div class="line">
+    <Button label="@click" color="danger" @click="eventForButton" />
   </div>
 </template>
 

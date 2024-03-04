@@ -20,7 +20,17 @@ const props = defineProps({
     type: Boolean,
     required: false,
   },
+  size: {
+    type: String,
+    default: "normal",
+  },
 });
+
+const emit = defineEmits(["click"]);
+
+const clickOnButton = () => {
+  emit("click");
+};
 </script>
 
 <template>
@@ -30,7 +40,9 @@ const props = defineProps({
       `btn--${color}`,
       { 'btn--rounded': rounded },
       { 'btn--outlined': outlined },
+      { 'btn--large': size === 'large' },
     ]"
+    @click="clickOnButton"
     :disabled="disabled"
   >
     {{ label }}
