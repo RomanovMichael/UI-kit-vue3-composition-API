@@ -1,9 +1,17 @@
 <script setup>
 import { ref } from "vue";
 import Checkbox from "@/components/Checkbox/Checkbox.vue";
+import CheckboxGroup from "@/components/Checkbox/CheckboxGroup.vue";
 const checkboxActive = ref(true);
 const checkboxDisabled = ref(true);
 const checkboxDisabledChecked = ref(true);
+const listOfHeroes = ref([
+  { name: "Spider Man", id: "id1" },
+  { name: "Batman", id: "id2" },
+  { name: "Thor", id: "id3" },
+  { name: "Loki", id: "id4" },
+]);
+const selectedHeroes = ref(["id1", "id3"]);
 </script>
 
 <template>
@@ -27,6 +35,15 @@ const checkboxDisabledChecked = ref(true);
       value="I like it"
       :disabled="checkboxDisabled"
       v-model:checked="checkboxDisabledChecked"
+    />
+  </div>
+  <h2 class="heading-2">Checkbox Group</h2>
+  <div class="line line--block">
+    <p>Selected: {{ selectedHeroes }}</p>
+    <checkbox-group
+      v-model:value="selectedHeroes"
+      name="heroes"
+      :options="listOfHeroes"
     />
   </div>
 </template>
