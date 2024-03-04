@@ -3,7 +3,9 @@
 
 <template>
   <header class="header">
-    <router-link to="/">UI Kit (Vue 3 + Composition API)</router-link>
+    <router-link class="header__link" to="/"
+      >UI Kit (Vue 3 + Composition API)</router-link
+    >
   </header>
 </template>
 
@@ -20,5 +22,10 @@
   display: flex;
   align-items: center;
   z-index: 1;
+}
+.header__link {
+  &:hover {
+    color: var(--primary);
+  }
 }
 </style>

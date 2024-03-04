@@ -17,6 +17,10 @@ const links = ref([
     name: "Button",
     href: "/button",
   },
+  {
+    name: "Checkbox",
+    href: "/checkbox",
+  },
 ]);
 </script>
 
@@ -34,32 +38,29 @@ const links = ref([
 
 <style lang="scss" scoped>
 .sidebar {
-  position: fixed;
   left: 0;
   top: 62px;
-  width: 250px;
   height: 100%;
-  padding: 20px;
   background: #fff;
-  box-shadow: 0 0 10 rgba(0, 0, 0, 0.07);
-  transform: translateX(-250px);
+  position: fixed;
+  width: 250px;
+  padding: 20px;
   transition: 0.2s;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.07);
+  transform: translateX(-250px);
 }
-
 .sidebar.is-open {
-  transform: translateX(0);
+  transform: translateX(0px);
 }
-
 .sidebar__link {
   display: block;
   border-radius: 12px;
-  padding: 10px;
-  margin-bottom: 10px;
   border: 2px solid #fff;
-  font-weight: bold;
   transition: 0.2s;
+  font-weight: bold;
+  margin-bottom: 10px;
   &:hover {
-    border-color: var(--primary);
+    color: var(--primary);
   }
 }
 </style>

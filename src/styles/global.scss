@@ -21,6 +21,21 @@ body {
 }
 
 a {
-    color: var(--primary);
+    color: black;
     text-decoration: none;
+    transition: 0.2s;
+
+    &:hover {
+        transition: 0.2s;
+    }
+}
+
+.line {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+
+    &--block {
+        display: block;
+    }
 }
