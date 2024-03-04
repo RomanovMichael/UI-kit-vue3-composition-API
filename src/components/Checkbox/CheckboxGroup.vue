@@ -2,6 +2,7 @@
 import Checkbox from "@/components/Checkbox/Checkbox.vue";
 
 const emit = defineEmits(["update:value"]);
+
 const props = defineProps({
   value: {
     type: Array,
@@ -26,6 +27,7 @@ const props = defineProps({
     },
   },
 });
+
 const check = (params) => {
   let updateValue = [...props.value];
   if (params.checked) {
