@@ -61,7 +61,7 @@ const handleClick = (event) => {
         { checkbox: type === 'checkbox' },
         { switch: type === 'switch' },
       ]"
-      @input="handleClick"
+      @input="handleClick($event)"
     />
     <label :for="id">{{ label }}</label>
     <label :for="id" class="switch__label" v-if="type === 'switch'">{{
